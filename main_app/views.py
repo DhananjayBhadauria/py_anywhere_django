@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def home(request):
       return HttpResponse('this is home page')
+
+def api_test(request):
+      return HttpResponse('response of api')
