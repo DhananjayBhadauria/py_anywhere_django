@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
       path('', views.home, name="home"),
-      path('api/', views.api_test, name="api") #test route
+      path('api/sending_contact_message', views.api_test, name="api") #test route
 ]

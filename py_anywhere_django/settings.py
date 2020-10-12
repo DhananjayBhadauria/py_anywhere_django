@@ -56,10 +56,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'py_anywhere_django.urls'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "*"
-   
-]
+
 CORS_ALLOW_ALL_ORIGINS= True
 
 TEMPLATES = [
@@ -123,6 +120,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yourcollegeportal@gmail.com'
+EMAIL_HOST_PASSWORD = 'test@1234'
 
 
 # Static files (CSS, JavaScript, Images)
