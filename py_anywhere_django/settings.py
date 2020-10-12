@@ -127,8 +127,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'yourcollegeportal@gmail.com'
-EMAIL_HOST_PASSWORD = 'test@1234'
+EMAIL_HOST_USER = 'web.portal.messages@gmail.com'
+EMAIL_HOST_PASSWORD = '*1web.portal.messages'
 
 
 # Static files (CSS, JavaScript, Images)
