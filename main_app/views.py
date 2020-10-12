@@ -26,6 +26,6 @@ def api_test(request):
                   [f'{to_mail}'],
                   fail_silently=False,
                   )          
-            return HttpResponse('Message Sent!!!')
+            return HttpResponse('Message Sent!')
       
 

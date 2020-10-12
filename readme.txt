@@ -1,5 +1,9 @@
 # starting paste this form to send mail
 1. update the value of to_mail in form
+2. form should be bootstrap
+3. jquery cdn should be added
+
+    
 
     <form id="contact_form">
         <h4 id="response_block" style="color: green;"></h4>
@@ -22,8 +26,8 @@
             <textarea name="message" id="message" class="form-control form-control-sm" rows="3" placeholder="Type Your Message" required></textarea>
         </div>
         
-        
-        <input type="hidden" name="to_mail" id="to_mail" value="writetodhananjay@gmail.com">
+        <!-- owners email here -->
+        <input type="hidden" name="to_mail" id="to_mail" value="dhananjay.bhadauria@trueblueappwerks.com">
         <input type="hidden" name="check" id="check" placeholder="check">
         <div class="spinner-border text-primary text-center" id="form_spin" role="status" style="display: none;">
             <span class="sr-only">Loading...</span>
@@ -36,7 +40,7 @@
         $('document').ready(function(){
         $('#submit_form').click(function(){
             if (!($('#name').val()) || !$('#contact').val() ){
-                alert('Please fill all details!!!')
+                alert('Please fill all details carefully then try again !!!')
                 return false;
             }
             // method if empty check robo field is filled
@@ -53,15 +57,14 @@
                 'message': $('#message').val(),
                 'to_mail': $('#to_mail').val(),
                 },
-                url:'http://localhost:8000/api/',
+                url:'http://dhananjaybhadauria.pythonanywhere.com/api/sending_contact_message/',
                 success: function(msg){
                     $('#response_block').html(msg)
                     $('#form_spin').css('display','none')
-                    // $('#contact_form')
+                    $('#contact_form')[0].reset();
+                    
                 }
             })
         })
         })
     </script>
-
-    # ending paste this form to send mail
