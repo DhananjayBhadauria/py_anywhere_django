@@ -22,7 +22,7 @@ def api_test(request):
                   f'{name} messaged through your Website...', #subject
 
                   f'Name: {name}, Email: {email}, Contact: {contact}, Message:{message}', #message
-                  'yourcollegeportal@gmail.com', #email_host mail
+                  'web.portal.messages@gmail.com', #email_host mail
                   [f'{to_mail}'],
                   fail_silently=False,
                   )          
